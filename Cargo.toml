@@ -1,0 +1,43 @@
+[package]
+name = "axum-tut"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.33.0", features = ["full"] }
+# -- Json
+serde = { version = "1.0.188", features = ["derive"] }
+serde_json = "1.0.107"
+serde_with = "3.3.0"
+# -- Web
+axum = "0.6.20"
+tower-cookies = "0.9.0"
+tower-http = { version = "0.4.4", features = ["fs"] }
+# -- Data
+sqlx = { version = "0.7.2", features = [
+    "runtime-tokio-rustls",
+    "postgres",
+    "uuid",
+    "time",
+] }
+# -- Tracing
+tracing = "0.1.39"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
+# -- Crypt & Encoding
+rand = "0.8.5"
+hmac = "0.12.1"
+sha2 = "0.10.8"
+base64-url = "2.0.0"
+# -- Others
+async-trait = "0.1.73"
+lazy-regex = "3.0.2"
+strum_macros = "0.25.2"
+uuid = { version = "1.4.1", features = ["v4", "fast-rng"] }
+sqlb = "0.4.0"
+
+[dev-dependencies]
+anyhow = "1.0.75"
+httpc-test = "0.1.6"
+serial_test = "2.0.0"
