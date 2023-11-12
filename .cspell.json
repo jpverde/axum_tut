@@ -1,0 +1,14 @@
+{
+  "dictionaries": ["project-words"],
+  "dictionaryDefinitions": [
+    {
+      "addWords": true,
+      "name": "project-words",
+      "path": "./.project-words.txt"
+    }
+  ],
+  "ignorePaths": ["target/", ".gitignore", ".vscode"],
+  "ignoreRegExpList": ["^keywords:.*", "^slug:.*"],
+  "language": "en,es",
+  "version": "0.2"
+}
